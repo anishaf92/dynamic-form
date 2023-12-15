@@ -28,9 +28,14 @@ const SpeakButton = () => {
  
 
     recognition.onresult = (event) => {
-      const last = event.results.length - 1;
-      const text = event.results[last][0].transcript;
-      setTranscript((prevTranscript) => prevTranscript + " " + text);
+      let transcriptText = "";
+  
+  for (let i = 0; i < event.results.length; i++) {
+    transcriptText += event.results[i][0].transcript;
+  }
+
+  setTranscript((prevTranscript) => prevTranscript + " " + transcriptText);
+
     };
 
     recognition.onend = () => {
@@ -46,7 +51,8 @@ const SpeakButton = () => {
       setIsRecording(false);
       setIsRecordingStopped(true)
       setStartTime(null);
-      console.log(transcript)
+      
+      
   };
   
 
@@ -95,6 +101,7 @@ const SpeakButton = () => {
           <FontAwesomeIcon icon={faMicrophone} size="lg" />
         </button>
       )}
+      {console.log(transcript)}
     </div>
   );
 };
