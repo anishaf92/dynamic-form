@@ -1,0 +1,75 @@
+body{
+  margin:10px;
+  justify-content: center;
+ 
+  background-color: #DEF2F1;
+  
+}
+.view{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  align-items: center;
+}
+.container{
+  display:flex;
+  justify-content: center;
+  padding-top:50px;
+}
+form{
+  display:flex;
+  flex-direction: column;
+  max-width:1000px;
+  gap:20px;
+  padding:40px;
+  align-items: flex-start;
+  border-top:5px solid #3AAFA9;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  background-color:#FFFFFF;
+  border-radius: 8px;
+
+  
+}
+.heading{
+  display:flex;
+  width:100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+h2{
+  color:#3AAFA9;
+}
+input{
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+.input-container{
+
+  display:flex;
+  flex-direction: row;
+  gap:10px;
+}
+button.submit{
+  border-radius: 5px;
+  border: none;
+  background-color:#3AAFA9;
+  color:#DEF2F1;
+  font-weight: bold;
+  padding:12px 15px;
+}
+.mic{
+  color:#3AAFA9;
+}
+.micrecording{
+  color: red;
+}
+
+@media only screen and (max-width:425px) {
+  form{
+    width:280px;
+    padding:10px;
+  }
+  
+}
